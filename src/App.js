@@ -5,15 +5,8 @@ import './App.css';
 function App() {
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
-  // Temporary initial data
-  const initialData = {
-    hits: [
-      { objectID: 1, title: "Google", url: "http://google.ca" },
-    ]
-  };
-
   // Application State
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState({ hits: [] });
   const [query, setQuery] = useState("react");
   const [url, setUrl] = useState();
 
