@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import './App.css';
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
   const [data, setData] = useState(initialData);
   const [query, setQuery] = useState("react");
   const [url, setUrl] = useState();
+
+  // Fetch data whenever url changes
+  useEffect(() => {
+    axios(url).then(result => setData(result.data));
+  }, [url]);
 
   // Build list of 'hits'
   const hitsList = data.hits.map(item => (
