@@ -2,9 +2,23 @@ import React from 'react';
 import './App.css';
 
 function App() {
+
+  const data = {
+    hits: [
+      { objectID: 1, title: "Google", url: "http://google.ca" },
+    ]
+  };
+
+  // Build list of 'hits'
+  const hitsList = data.hits.map(item => (
+    <li key={item.objectID}>
+      <a href={item.url}>{item.title}</a>
+    </li>
+  ));
+
   return (
     <div className="App">
-      <h4>Clean React App</h4>
+      <ul>{hitsList}</ul>
     </div>
   );
 }
