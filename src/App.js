@@ -31,7 +31,7 @@ function App() {
       <h4>{url}</h4>
       <input type="text" value={query}
         onChange={event => setQuery(event.target.value)} />
-        
+
       <button
         type="button"
         onClick={() => setUrl(BASEURL + query)}>
