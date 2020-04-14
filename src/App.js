@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
   // Temporary initial data
   const initialData = {
@@ -10,15 +11,10 @@ function App() {
     ]
   };
 
-  // Keep track of "data" as State. Initialize with some initial Data
+  // Application State
   const [data, setData] = useState(initialData);
-  // Note the Javascript Destructuring.  Same result as this:
-  // const myState = useState(initialData);
-  // const data = myState[0];     // state item
-  // const setData = myState[1]; // updating function (setter)
-
-  // Keep track of " query" 
   const [query, setQuery] = useState("react");
+  const [url, setUrl] = useState();
 
   // Build list of 'hits'
   const hitsList = data.hits.map(item => (
@@ -30,11 +26,17 @@ function App() {
   return (
     <div className="App">
       <h3>My Search Page</h3>
-      
+
       <h4>{query}</h4>
+      <h4>{url}</h4>
       <input type="text" value={query}
         onChange={event => setQuery(event.target.value)} />
-
+        
+      <button
+        type="button"
+        onClick={() => setUrl(BASEURL + query)}>
+        Search
+			</button>
       <ul>{hitsList}</ul>
     </div>
   );
