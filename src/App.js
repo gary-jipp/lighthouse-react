@@ -30,11 +30,11 @@ function App() {
       <h4>{query}</h4>
       <h4>{url}</h4>
 
-      // Use a component for the Search Control
+      {/* Use a component for the Search Control */}
       <Search initial="React"
         onClick={(query) => setUrl(BASEURL + query)} />
 
-      // Won't need this anymore
+      {/* Won't need this anymore */}
       <input type="text" value={query}
         onChange={event => setQuery(event.target.value)} />
       <button
