@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <h3>My Search Page</h3>
-
       <h4>{url}</h4>
 
       {/* Use a component for the Search Control*/}
