@@ -6,7 +6,7 @@ function App() {
   const data = {
     hits: [
       { objectID: 1, title: "Google", url: "http://google.ca" },
-      { objectID: 2, title: "Amazon", url: "http://amazon.ca" },
+      { objectID: 2, title: "Google", url: "http://amazon.ca" },
     ]
   };
 
