@@ -1,7 +1,7 @@
 # React from the Ground Up
 
 We cover the fundementals of React including
-- create a new React App starting with nothing but node.js
+- create a new React App starting with node.js
 - review of useState() 
 - how hmtl (DOM) elements can interact with State (onChange, onClick,etc)
 - brief intro to useEffect() - fetch data from a Web Service
