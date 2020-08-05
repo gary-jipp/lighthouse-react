@@ -23,6 +23,10 @@ function App() {
     </li>
   ));
 
+  const buttonClick = function (query) {
+    setUrl(BASEURL + query);
+  };
+
   return (
     <div className="App">
       <h3>My Search Page</h3>
@@ -34,7 +38,7 @@ function App() {
 
       <button
         type="button"
-        onClick={() => setUrl(BASEURL + query)}>
+        onClick={buttonClick}>
         Search
 			</button>
       <ul>{hitsList}</ul>
