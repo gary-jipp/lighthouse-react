@@ -1,27 +1,32 @@
 import React, { Fragment, useState } from "react";
 
-// function Search(props) {
-function Search({onClick, initial}) {
+function Search({ onClick, initial }) {
+  // Note the destructuring again
+  // Same as this: 
+  // function Search(props) {
+  // const {onClick, initial} = props;
 
-	// Several ways we can reference props
-	// const {onClick, initial} = props;
-	
-	// Just need one state 
-	const [query, setQuery] = useState(initial);
+  // Just need one state 
+  const [query, setQuery] = useState(initial);
 
-	return (
-		<Fragment>
-			<input type="text" value={query} 
-				onChange={(event) => setQuery(event.target.value)} />
+  // Convenience onChange function
+  const onChange = function (event) {
+    setQuery(event.target.value);
+  };
 
-			<button type="button" 
-				onClick={() => onClick(query)}>
-				{/* onClick={() => props.onClick(query)}> */}
+
+  return (
+    <Fragment>
+      <input type="text" value={query} onChange={onChange} />
+
+      <button type="button"
+        onClick={() => onClick(query)}>
+        {/* onClick={() => props.onClick(query)}> */}
 				Search
 			</button>
 
-		</Fragment>
-	);
+    </Fragment>
+  );
 }
 
 export default Search;
