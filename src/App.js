@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const title = "My Search Page";
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
   // Temporary initial data
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <h3>My Search Page</h3>
+      <h3>{title}</h3>
 
       <h4>{query}</h4>
       <h4>{url}</h4>
