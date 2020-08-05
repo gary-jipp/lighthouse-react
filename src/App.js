@@ -17,7 +17,7 @@ function App() {
   // const data = myState[0];     // state item
   // const setData = myState[1]; // updating function (setter)
 
-  // Build list of 'hits'
+  // Build (array) of <li> elements from  data.hits
   const hitsList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
