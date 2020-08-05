@@ -20,7 +20,7 @@ function App() {
   // Keep track of " query" 
   const [query, setQuery] = useState("react");
 
-  // Build list of 'hits'
+  // Build (array) of <li> elements from  data.hits
   const hitsList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <h3>My Search Page</h3>
-      
+
       <h4>{query}</h4>
       <input type="text" value={query}
         onChange={event => setQuery(event.target.value)} />
