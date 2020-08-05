@@ -17,7 +17,7 @@ function App() {
   const [query, setQuery] = useState("react");
   const [url, setUrl] = useState();
 
-  // Build list of 'hits'
+ // Build (array) of <li> elements from  data.hits
   const hitsList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
