@@ -10,7 +10,7 @@ function App() {
     ]
   };
 
-  // Build list (array) of 'hits'
+  // Build (array) of <li> elements from  data.hits
   const hitsList = data.hits.map(item =>
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
