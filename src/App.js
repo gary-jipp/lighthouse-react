@@ -32,7 +32,7 @@ function App() {
       <h3>{title}</h3>
       <h4>{url}</h4>
 
-      {/* Use a component for a Text & Button Control*/}
+      {/* Use our new Text & Button Component */}
       <Search initial="React" onClick={searchClick} />
 
       <ul>{hitsList}</ul>
