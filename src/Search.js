@@ -14,14 +14,12 @@ function Search({ onClick, initial }) {
     setQuery(event.target.value);
   };
 
-
   return (
     <Fragment>
       <input type="text" value={query} onChange={onChange} />
 
-      <button type="button"
-        onClick={() => onClick(query)}>
-        {/* onClick={() => props.onClick(query)}> */}
+      <button type="button" onClick={() => onClick(query)}>
+        {/* instead of: onClick={() => props.onClick(query)}> */}
 				Search
 			</button>
 
