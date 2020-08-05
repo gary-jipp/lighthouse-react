@@ -9,7 +9,7 @@ function App() {
 
   // Application State
   const [data, setData] = useState({ hits: [] });
-  const [url, setUrl] = useState(); // Won't need this anymore
+  const [url, setUrl] = useState();
 
   // Fetch data whenever url changes
   useEffect(() => {
