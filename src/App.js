@@ -16,7 +16,7 @@ function App() {
     axios(url).then(result => setData(result.data));
   }, [url]);
 
-  // Build list of 'hits'
+  // Build array of 'hits'
   const hitsList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
@@ -32,7 +32,7 @@ function App() {
       <h3>{title}</h3>
       <h4>{url}</h4>
 
-      {/* Use a component for the Search Control*/}
+      {/* Use a component for a Text & Button Control*/}
       <Search initial="React" onClick={searchClick} />
 
       <ul>{hitsList}</ul>
