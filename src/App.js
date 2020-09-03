@@ -13,7 +13,7 @@ export default function App() {
   const [data, setData] = useState(initialData);
 
   // Keep track of " query" 
-  const [query, setQuery] = useState("react");
+  const [input, setInput] = useState("react");
 
   // Build (array) of <li> elements from  data.hits
   const hitsList = data.map(item => (
@@ -24,15 +24,15 @@ export default function App() {
 
   // Convenience onChange function
   const onChange = function (event) {
-    setQuery(event.target.value);
+    setInput(event.target.value);
   };
 
   return (
     <Fragment className="App">
       <h3>My Search Page</h3>
 
-      <h4>{query}</h4>
-      <input type="text" value={query} onChange={onChange} />
+      <h4>{input}</h4>
+      <input type="text" value={input} onChange={onChange} />
 
       <ul>{hitsList}</ul>
     </Fragment>
