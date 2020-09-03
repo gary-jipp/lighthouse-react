@@ -7,16 +7,20 @@ export default function Input({ onClick, initial }) {
   // const {onClick, initial} = props;
 
   // Just need one state 
-  const [query, setQuery] = useState(initial);
+  const [text, setText] = useState(initial);
+
+  // Convenience onChange function
+  const onChange = function (event) {
+    setText(event.target.value);
+  };
 
   return (
     <div className="Input">
-      <input type="text" value={query}
-        onChange={(event) => setQuery(event.target.value)} />
+      <input type="text" value={text} onChange={onChange} />
 
       <button type="button"
-        onClick={() => onClick(query)}>
-        {/* onClick={() => props.onClick(query)}> */}
+        onClick={() => onClick(text)}>
+        {/* onClick={() => props.onClick(text)}> */}
 				Search
 			</button>
 
