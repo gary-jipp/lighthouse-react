@@ -7,7 +7,7 @@ function App() {
 
   // Application State
   const [data, setData] = useState({ hits: [] });
-  const [query, setQuery] = useState();
+  const [input, setInput] = useState();
   const [url, setUrl] = useState();
 
   // Fetch data whenever url changes
@@ -24,21 +24,21 @@ function App() {
 
   // Convenience onChange function
   const onChange = function (event) {
-    setQuery(event.target.value);
+    setInput(event.target.value);
   };
 
 
   return (
     <div className="App">
       <h3>My Search Page</h3>
-      <h4>{query}</h4>
+      <h4>{input}</h4>
 
-      <input type="text" value={query}
+      <input type="text" value={input}
         onChange={onChange} />
 
       <button
         type="button"
-        onClick={() => setUrl(BASEURL + query)}>
+        onClick={() => setUrl(BASEURL + input)}>
         Search
 			</button>
 
