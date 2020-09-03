@@ -14,7 +14,7 @@ function App() {
 
   // Application State
   const [data, setData] = useState(initialData);
-  const [query, setQuery] = useState("react");
+  const [input, setInput] = useState("react");
   const [url, setUrl] = useState();
 
   // Build (array) of <li> elements from  data.hits
@@ -37,9 +37,9 @@ function App() {
     <div className="App">
       <h3>{title}</h3>
 
-      <h4>{query}</h4>
+      <h4>{input}</h4>
       <h4>{url}</h4>
-      <input type="text" value={query} onChange={onChange} />
+      <input type="text" value={input} onChange={onChange} />
 
       <button type="button" onClick={buttonClick}> Search</button>
       <ul>{hitsList}</ul>
