@@ -27,8 +27,7 @@ function App() {
       <h3>My Search Page</h3>
 
       <h4>{query}</h4>
-      <h4>{url}</h4>
-      
+
       <input type="text" value={query}
         onChange={event => setQuery(event.target.value)} />
 
@@ -38,6 +37,7 @@ function App() {
         Search
 			</button>
 
+      <h4>{url}</h4>
       <ul>{hitsList}</ul>
     </div>
   );
