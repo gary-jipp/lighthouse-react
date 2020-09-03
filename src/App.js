@@ -10,6 +10,8 @@ function App() {
     ]
   };
 
+  const list = [<li>This is a list item</li>];
+
   // Build (array) of <li> elements from  data.hits
   const hitsList = data.hits.map(item =>
     <li key={item.objectID}>
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <ul>{hitsList}</ul>
+      <ul>{list}</ul>
     </div>
   );
 }
