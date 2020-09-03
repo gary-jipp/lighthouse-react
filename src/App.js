@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Fragment className="App">
       <h3>My Search Page</h3>
       <h4>{input}</h4>
 
@@ -47,7 +47,7 @@ function App() {
 
       <h4>{url}</h4>
       <ul>{hitsList}</ul>
-    </div>
+    </Fragment>
   );
 }
 
