@@ -4,6 +4,7 @@ import './App.css';
 // Some Initial data
 const initialData = [
   { objectID: 1, title: "Google", url: "http://google.ca" },
+  { objectID: 2, title: "Amazon", url: "http://amazon.ca" },
 ];
 
 export default function App() {
