@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 
 // Some Initial data
-const initialData = {
-  hits: [
-    { objectID: 1, title: "Google", url: "http://google.ca" },
-  ]
-};
+const initialData = [
+  { objectID: 1, title: "Google", url: "http://google.ca" },
+];
 
 export default function App() {
 
@@ -18,7 +16,7 @@ export default function App() {
   // const setData = myState[1]; // updating function (setter)
 
   // Build array of <li> elements from  data
-  const hitsList = data.hits.map(item => (
+  const hitsList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
