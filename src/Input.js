@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 // export default function Input(props) {
 export default function Input({ buttonText, onClick, initial }) {
@@ -15,7 +15,7 @@ export default function Input({ buttonText, onClick, initial }) {
   };
 
   return (
-    <div className="Input">
+    < Fragment className="Input" >
       <input type="text" value={text} onChange={onChange} />
 
       <button type="button" onClick={() => onClick(text)}>
@@ -23,6 +23,6 @@ export default function Input({ buttonText, onClick, initial }) {
         {buttonText}
       </button>
 
-    </div >
+    </Fragment>
   );
 }
