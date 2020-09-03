@@ -22,13 +22,19 @@ function App() {
     </li>
   ));
 
+  // Convenience onChange function
+  const onChange = function (event) {
+    setQuery(event.target.value);
+  };
+
+
   return (
     <div className="App">
       <h3>My Search Page</h3>
       <h4>{query}</h4>
 
       <input type="text" value={query}
-        onChange={event => setQuery(event.target.value)} />
+        onChange={onChange} />
 
       <button
         type="button"
