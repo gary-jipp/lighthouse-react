@@ -27,8 +27,8 @@ function App() {
     setInput(event.target.value);
   };
 
-  const buttonClick = function (query) {
-    setUrl(BASEURL + query);
+  const buttonClick = function () {
+    setUrl(BASEURL + input);
   };
 
   return (
