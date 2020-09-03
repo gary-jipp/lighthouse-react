@@ -18,8 +18,7 @@ export default function Input({ onClick, initial }) {
     <div className="Input">
       <input type="text" value={text} onChange={onChange} />
 
-      <button type="button"
-        onClick={() => onClick(text)}>
+      <button type="button" onClick={() => onClick(text)}>
         {/* onClick={() => props.onClick(text)}> */}
 				Search
 			</button>
