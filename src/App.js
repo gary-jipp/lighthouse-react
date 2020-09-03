@@ -3,7 +3,7 @@ import axios from "axios";
 import Search from "./Search";
 import './App.css';
 
-function App() {
+export default function App() {
   const title = "My Search Page";
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
@@ -39,5 +39,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
