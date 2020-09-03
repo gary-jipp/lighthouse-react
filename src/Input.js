@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-function Search({ onClick, initial }) {
+export default function Input({ buttonText, onClick, initial }) {
   // Note the destructuring again
   // Same as this: 
   // function Search(props) {
@@ -20,11 +20,9 @@ function Search({ onClick, initial }) {
 
       <button type="button" onClick={() => onClick(query)}>
         {/* instead of: onClick={() => props.onClick(query)}> */}
-				Search
-			</button>
+        {buttonText}
+      </button>
 
     </Fragment>
   );
 }
-
-export default Search;

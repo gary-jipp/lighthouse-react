@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Search from "./Search";
+import Input from "./Input.js";
 import './App.css';
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
       <h4>{url}</h4>
 
       {/* Use our new Text & Button Component */}
-      <Search initial="React" onClick={searchClick} />
+      <Input buttonText="Search" initial="React" onClick={searchClick} />
 
       <ul>{hitsList}</ul>
     </div>
