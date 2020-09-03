@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 
 const data = [
@@ -28,7 +28,7 @@ export default function App() {
 
   // In the "return" React will render whatever you give it
   return (
-    <Fragment className="App">
+    <div className="App">
       {header}
       {div}
       <ul>
@@ -36,6 +36,6 @@ export default function App() {
         {array}
         {mappedList}
       </ul>
-    </Fragment>
+    </div>
   );
 }
