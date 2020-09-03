@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 // Initial data
@@ -28,13 +28,13 @@ export default function App() {
   };
 
   return (
-    <Fragment className="App">
+    <div className="App">
       <h3>My Search Page</h3>
 
       <h4>{input}</h4>
       <input type="text" value={input} onChange={onChange} />
 
       <ul>{hitsList}</ul>
-    </Fragment>
+    </div>
   );
 }
