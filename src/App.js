@@ -24,6 +24,11 @@ function App() {
     </li>
   ));
 
+  // Convenience onChange function
+  const onChange = function (event) {
+    setInput(event.target.value);
+  };
+
   const buttonClick = function (query) {
     setUrl(BASEURL + query);
   };
@@ -34,8 +39,7 @@ function App() {
 
       <h4>{query}</h4>
       <h4>{url}</h4>
-      <input type="text" value={query}
-        onChange={event => setQuery(event.target.value)} />
+      <input type="text" value={query} onChange={onChange} />
 
       <button type="button" onClick={buttonClick}> Search</button>
       <ul>{hitsList}</ul>
