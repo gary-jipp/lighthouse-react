@@ -7,7 +7,7 @@ function App() {
 
   // Application State
   const [data, setData] = useState({ hits: [] });
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const [url, setUrl] = useState();
 
   // Fetch data whenever url changes
