@@ -7,7 +7,7 @@ function App() {
 
   // Application State
   const [data, setData] = useState({ hits: [] });
-  const [query, setQuery] = useState("react");
+  const [query, setQuery] = useState();
   const [url, setUrl] = useState();
 
   // Fetch data whenever url changes
@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <h3>My Search Page</h3>
-
       <h4>{query}</h4>
 
       <input type="text" value={query}
