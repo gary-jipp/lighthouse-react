@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 
+// Temporary initial data
+const initialData = {
+  hits: [
+    { objectID: 1, title: "Google", url: "http://google.ca" },
+  ]
+};
+
 function App() {
   const title = "My Search Page";
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
-  // Temporary initial data
-  const initialData = {
-    hits: [
-      { objectID: 1, title: "Google", url: "http://google.ca" },
-    ]
-  };
 
   // Application State
   const [data, setData] = useState(initialData);
