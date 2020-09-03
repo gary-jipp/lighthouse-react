@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react';
 import './App.css';
 
-const data = {
-  hits: [
-    { objectID: 1, title: "Google", url: "http://google.ca" },
-    { objectID: 2, title: "Amazon", url: "http://amazon.ca" },
-  ]
-};
+const data = [
+  { objectID: 1, title: "Google", url: "http://google.ca" },
+  { objectID: 2, title: "Amazon", url: "http://amazon.ca" },
+];
 
 export default function App() {
 
@@ -22,7 +20,7 @@ export default function App() {
     ];
 
   // Build an array of <li> elements from some data
-  const hitsList = data.hits.map(item =>
+  const mappedList = data.map(item =>
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -36,6 +34,7 @@ export default function App() {
       <ul>
         {li}
         {array}
+        {mappedList}
       </ul>
     </Fragment>
   );
