@@ -15,7 +15,7 @@ export default function Input({ buttonText, onClick, initial }) {
   };
 
   return (
-    <Fragment>
+    < div className="Input" >
       <input type="text" value={query} onChange={onChange} />
 
       <button type="button" onClick={() => onClick(query)}>
@@ -23,6 +23,6 @@ export default function Input({ buttonText, onClick, initial }) {
         {buttonText}
       </button>
 
-    </Fragment>
+    </div>
   );
 }
