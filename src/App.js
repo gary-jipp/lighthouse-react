@@ -27,6 +27,9 @@ function App() {
     setInput(event.target.value);
   };
 
+  const buttonClick = function (query) {
+    setUrl(BASEURL + query);
+  };
 
   return (
     <div className="App">
@@ -38,7 +41,7 @@ function App() {
 
       <button
         type="button"
-        onClick={() => setUrl(BASEURL + input)}>
+        onClick={buttonClick}>
         Search
 			</button>
 
