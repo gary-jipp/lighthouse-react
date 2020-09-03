@@ -1,5 +1,5 @@
-import React from 'react';
-// import './App.css';
+import React, { Fragment } from 'react';
+import './App.css';
 
 const data = {
   hits: [
@@ -8,9 +8,9 @@ const data = {
   ]
 };
 
-function App() {
+export default function App() {
 
-  // React will just render whatever you give it
+  // React is just html . There's no magic here
   const header = <h3>This is a Header</h3>;
   const div = <div>This is stuff inside a div</div>;
   const li = <li>This is a list item</li>;
@@ -21,23 +21,22 @@ function App() {
       <li>This is a list item in an array</li>
     ];
 
-  // Build (array) of <li> elements from  data.hits
+  // Build an array of <li> elements from some data
   const hitsList = data.hits.map(item =>
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
   );
 
+  // In the "return" React will render whatever you give it
   return (
-    <div className="App">
+    <Fragment className="App">
       {header}
       {div}
       <ul>
         {li}
         {array}
       </ul>
-    </div>
+    </Fragment>
   );
 }
-
-export default App;
