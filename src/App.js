@@ -3,7 +3,7 @@ import axios from "axios";
 import Input from "./Input";
 import './App.css';
 
-function App() {
+export default function App() {
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
   // Application State
@@ -31,7 +31,7 @@ function App() {
       <h3>My Search Page</h3>
 
       {/* Use a component for the Search Control */}
-      <Input buttonText = "Search" initial="" onClick={onClick} />
+      <Input buttonText="Search" initial="" onClick={onClick} />
       <h4>{url}</h4>
 
       <ul>{hitsList}</ul>
@@ -39,5 +39,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
