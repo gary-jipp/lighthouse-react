@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // export default function Input(props) {
-export default function Input({ onClick, initial }) {
+export default function Input({ buttonText, onClick, initial }) {
 
   // Several ways we can reference props
   // const {onClick, initial} = props;
@@ -20,8 +20,8 @@ export default function Input({ onClick, initial }) {
 
       <button type="button" onClick={() => onClick(text)}>
         {/* onClick={() => props.onClick(text)}> */}
-				Search
-			</button>
+        {buttonText}
+      </button>
 
     </div >
   );

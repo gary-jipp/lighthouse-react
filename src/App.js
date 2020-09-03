@@ -31,7 +31,7 @@ function App() {
       <h3>My Search Page</h3>
 
       {/* Use a component for the Search Control */}
-      <Input initial="" onClick={onClick} />
+      <Input buttonText = "Search" initial="" onClick={onClick} />
       <h4>{url}</h4>
 
       <ul>{hitsList}</ul>
