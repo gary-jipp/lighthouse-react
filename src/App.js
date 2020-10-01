@@ -17,7 +17,7 @@ export default function App() {
   // const setData = myState[1]; // updating function (setter)
 
   // Build array of <li> elements from  data
-  const hitsList = data.map(item => (
+  const mappedList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div className="App">
       <h3>My Search Page</h3>
-      <ul>{hitsList}</ul>
+      <ul>{mappedList}</ul>
     </div>
   );
 }
