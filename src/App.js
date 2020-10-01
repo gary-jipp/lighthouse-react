@@ -11,7 +11,6 @@ function App() {
   const title = "My Search Page";
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
-
   // Application State
   const [data, setData] = useState(initialData);
   const [input, setInput] = useState("");
