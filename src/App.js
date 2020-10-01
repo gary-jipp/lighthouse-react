@@ -17,7 +17,7 @@ function App() {
   }, [url]);
 
   // Build list of 'hits'
-  const hitsList = data.hits.map(item => (
+  const mappedList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -47,7 +47,7 @@ function App() {
 			</button>
 
       <h4>{url}</h4>
-      <ul>{hitsList}</ul>
+      <ul>{mappedList}</ul>
     </div>
   );
 }
