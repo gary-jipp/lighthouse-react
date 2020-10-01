@@ -33,7 +33,7 @@ export default function App() {
       <h4>{url}</h4>
 
       {/* Use our new Text & Button Component */}
-      <Input buttonText="Search" initial="React" onClick={searchClick} />
+      <Input buttonText="Search" initial="Mercury" onClick={searchClick} />
 
       <ul>{mappedList}</ul>
     </div>
