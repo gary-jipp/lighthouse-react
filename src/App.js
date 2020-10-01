@@ -18,7 +18,7 @@ function App() {
   const [url, setUrl] = useState();
 
   // Build (array) of <li> elements from  data.hits
-  const hitsList = data.map(item => (
+  const mappedList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -42,7 +42,7 @@ function App() {
 
       <button type="button" onClick={buttonClick}> Search</button>
       <h4>{url}</h4>
-      <ul>{hitsList}</ul>
+      <ul>{mappedList}</ul>
     </div>
   );
 }
