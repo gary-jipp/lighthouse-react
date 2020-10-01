@@ -17,7 +17,7 @@ export default function App() {
   }, [url]);
 
   // Build array of 'hits'
-  const hitsList = data.hits.map(item => (
+  const mappedList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -35,7 +35,7 @@ export default function App() {
       {/* Use our new Text & Button Component */}
       <Input buttonText="Search" initial="React" onClick={searchClick} />
 
-      <ul>{hitsList}</ul>
+      <ul>{mappedList}</ul>
     </div>
   );
 }
