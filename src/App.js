@@ -16,7 +16,7 @@ export default function App() {
   const [input, setInput] = useState("react");
 
   // Build (array) of <li> elements from  data.hits
-  const hitsList = data.map(item => (
+  const mappedList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
@@ -34,7 +34,7 @@ export default function App() {
       <h4>{input}</h4>
       <input type="text" value={input} onChange={onChange} />
 
-      <ul>{hitsList}</ul>
+      <ul>{mappedList}</ul>
     </div>
   );
 }
