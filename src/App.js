@@ -13,7 +13,7 @@ export default function App() {
   const div = <div>This is stuff inside a div</div>;
   const li = <li>This is a list item</li>;
 
-  const array =
+  const list =
     [
       <li>This is a list item in an array</li>,
       <li>This is a list item in an array</li>
@@ -33,7 +33,7 @@ export default function App() {
       {div}
       <ul>
         {li}
-        {array}
+        {list}
         {mappedList}
       </ul>
     </div>
