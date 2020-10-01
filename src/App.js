@@ -12,7 +12,8 @@ function App() {
 
   // Fetch data whenever url changes
   useEffect(() => {
-    axios(url).then(result => setData(result.data));
+    axios(url)
+      .then(result => setData(result.data));
   }, [url]);
 
   // Build list of 'hits'
