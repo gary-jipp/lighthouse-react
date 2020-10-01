@@ -8,9 +8,9 @@ const initialData = [
 ];
 
 export default function App() {
-
   // Keep track of "data" as State. Initialize with some initial Data
   const [data, setData] = useState(initialData);
+  
   // Note the Javascript Destructuring.  Same result as this:
   // const myState = useState(initialData);
   // const data = myState[0];     // state item
