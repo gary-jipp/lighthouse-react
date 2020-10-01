@@ -8,7 +8,6 @@ const initialData = [
 ];
 
 export default function App() {
-
   // Keep track of "data" as State. Initialize with some initial Data
   const [data, setData] = useState(initialData);
 
