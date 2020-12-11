@@ -2,7 +2,7 @@
 
 We cover the fundementals of React including
 - create a new React App starting with node.js
-- review of useState() 
+- review of useState()  & how to avoid mutating state
 - how hmtl (DOM) elements can interact with State (onChange, onClick,etc)
 - brief intro to useEffect() - fetch data from a Web Service
 - create a Custom Child Component with "props" (attributes)
