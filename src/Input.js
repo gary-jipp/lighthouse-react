@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 
 export default function Input({ buttonText, onClick, initial }) {
   // Note the destructuring again
