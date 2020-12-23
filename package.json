@@ -14,7 +14,7 @@
   },
   "scripts": {
     "prestart": "npm i serve",
-    "start": "npx serve -s build",
+    "start": "set PORT=8000 && serve -s build",
     "start:dev": "set PORT=8000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
