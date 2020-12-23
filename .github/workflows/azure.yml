@@ -19,6 +19,8 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - '**.md'
 
 env:
   AZURE_WEBAPP_NAME: lighthouse-react # set this to your application's name
@@ -42,6 +44,9 @@ jobs:
         npm install
         npm run build --if-present
         # npm run test --if-present
+        rm -rf node_modules
+        rm -rf src
+        rm -rf public
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
