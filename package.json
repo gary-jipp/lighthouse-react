@@ -13,9 +13,12 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "serve -s build",
+    "prestart": "npm i serve",
+    "start": "npx serve -s build",
+    "start:dev": "set PORT=8000 && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
