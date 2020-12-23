@@ -44,6 +44,9 @@ jobs:
         npm install
         npm run build --if-present
         # npm run test --if-present
+        echo 'Removing extra files ...'
+        rm -rf .git*
+        rm -rf README.md
         rm -rf node_modules
         rm -rf src
         rm -rf public
