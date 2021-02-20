@@ -14,17 +14,17 @@ export default function App() {
   // Keep track of " query" 
   const [input, setInput] = useState("react");
 
-  // Build (array) of <li> elements from  data.hits
+  // Convenience onChange function
+  const onChange = function (event) {
+    setInput(event.target.value);
+  };
+
+  // Build (array) of <li> elements from  data
   const mappedList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
   ));
-
-  // Convenience onChange function
-  const onChange = function (event) {
-    setInput(event.target.value);
-  };
 
   return (
     <div className="App">
