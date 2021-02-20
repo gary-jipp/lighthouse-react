@@ -6,18 +6,18 @@ function App() {
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
 
   // Application State
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState([]);
   const [input, setInput] = useState("");
   const [url, setUrl] = useState();
 
   // Fetch data whenever url changes
   useEffect(() => {
     axios(url)
-      .then(result => setData(result.data));
+      .then(result => setData(result.data.hits));
   }, [url]);
 
   // Build list of 'hits'
-  const mappedList = data.hits.map(item => (
+  const mappedList = data.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
     </li>
