@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // export default function Input(props) {
 export default function Input({ buttonText, onClick, initial }) {
-
   // Several ways we can reference props
   // const {onClick, initial} = props;
 
@@ -26,3 +25,5 @@ export default function Input({ buttonText, onClick, initial }) {
     </div>
   );
 }
+
+// notice I have the export above
