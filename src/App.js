@@ -16,12 +16,6 @@ function App() {
   const [input, setInput] = useState("");
   const [url, setUrl] = useState();
 
-  // Build (array) of <li> elements from  data.hits
-  const mappedList = data.map(item => (
-    <li key={item.objectID}>
-      <a href={item.url}>{item.title}</a>
-    </li>
-  ));
 
   // Convenience onChange function
   const onChange = function (event) {
@@ -31,6 +25,13 @@ function App() {
   const buttonClick = function () {
     setUrl(BASEURL + input);
   };
+
+  // Build (array) of <li> elements from data
+  const mappedList = data.map(item => (
+    <li key={item.objectID}>
+      <a href={item.url}>{item.title}</a>
+    </li>
+  ));
 
   return (
     <div className="App">
