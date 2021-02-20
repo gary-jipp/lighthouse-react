@@ -8,7 +8,7 @@ const data = [
 
 export default function App() {
 
-  // React is just html . There's no magic here
+  // jsx is mostly just html - There's no magic here
   const header = <h3>This is a Header</h3>;
   const div = <div>This is stuff inside a div</div>;
   const li = <li>This is a list item</li>;
