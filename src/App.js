@@ -16,8 +16,6 @@ function App() {
   const [input, setInput] = useState("");
   const [url, setUrl] = useState();
 
-
-  // Convenience onChange function
   const onChange = function (event) {
     setInput(event.target.value);
   };
