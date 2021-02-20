@@ -26,3 +26,5 @@ export default function Input({ buttonText, onClick, initial }) {
     </div>
   );
 }
+
+// Notice that the export statement is included above
