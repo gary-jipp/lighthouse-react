@@ -13,8 +13,13 @@ export default function App() {
 
   // Fetch data whenever url changes
   useEffect(() => {
-    axios(url).then(result => setData(result.data));
+    axios(url)
+      .then(result => setData(result.data));
   }, [url]);
+
+  const searchClick = function (query) {
+    setUrl(BASEURL + query);
+  };
 
   // Build array of 'hits'
   const mappedList = data.hits.map(item => (
@@ -22,10 +27,6 @@ export default function App() {
       <a href={item.url}>{item.title}</a>
     </li>
   ));
-
-  const searchClick = function (query) {
-    setUrl(BASEURL + query);
-  };
 
   return (
     <div className="App">
