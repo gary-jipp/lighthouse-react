@@ -21,7 +21,7 @@ export default function App() {
     setUrl(BASEURL + query);
   };
 
-  // Build array of 'hits'
+  // Build array of 'hits' from data
   const mappedList = data.hits.map(item => (
     <li key={item.objectID}>
       <a href={item.url}>{item.title}</a>
