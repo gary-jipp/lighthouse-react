@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Input from "./Input";
-import './App.css';
+import Input from "Input";
+import 'App.css';
 
 export default function App() {
   const BASEURL = 'https://hn.algolia.com/api/v1/search?query=';
