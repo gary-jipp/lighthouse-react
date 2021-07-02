@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Input from "./Input.js";
-import './App.css';
+import Input from "Input";
+import 'App.css';
 
 export default function App() {
   const title = "My Search Page";
