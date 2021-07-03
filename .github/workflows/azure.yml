@@ -18,7 +18,7 @@
 on:
   push:
     branches:
-      - master
+      - deploy
     paths-ignore:
       - '**.md'
 
